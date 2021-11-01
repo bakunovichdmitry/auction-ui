@@ -1,16 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import MainPage from "./pages/mainPage";
-import LotDetailPage from "./pages/lotDetailPage";
-import reportWebVitals from './reportWebVitals';
+import App from "./App";
 
 ReactDOM.render(
-    <React.StrictMode>
-        {/*<MainPage />*/}
-        <LotDetailPage/>
-    </React.StrictMode>,
+    <App />,
     document.getElementById('root')
 );
 
-reportWebVitals();

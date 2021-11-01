@@ -1,7 +1,6 @@
 import '../styles/mainPage.css';
 import Lot from '../components/lot';
-
-
+import Login from "./loginPage";
 import React from 'react';
 
 
@@ -27,14 +26,12 @@ class MainPage extends React.Component {
         };
     }
 
-
     componentDidMount() {
         const result = getLots("http://localhost:8000/lots/");
         result.then((value => this.setState({lotsList: value})));
     }
 
     render() {
-
         return (
             <div className="page-wrapper">
                 <header>
@@ -43,7 +40,9 @@ class MainPage extends React.Component {
                 <div className="main-container">
                     LOTS
                     {
-                        this.state.lotsList.map(item => <Lot auction={item.auction} item={item.item}/>)
+                        this.state.lotsList.map(
+                            (item, index) => <Lot key={index} auction={item.auction} item={item.item}/>
+                        )
                     }
                 </div>
                 <footer>
