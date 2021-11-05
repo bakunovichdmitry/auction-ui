@@ -6,7 +6,7 @@ const LotList = ({lots}) => {
     return (
         <div>
             {lots.map((lot) =>
-                <LotItem key={lot.unique_id} auction={lot.auction} item={lot.item}/>
+                <LotItem key={lot.unique_id} auction={lot.auction} item={lot.item} unique_id={lot.unique_id}/>
             )}
         </div>
     );

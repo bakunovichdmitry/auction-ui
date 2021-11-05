@@ -1,12 +1,26 @@
 import http from '../http-common'
 
 export default class LotService {
-    static getLots(limit = 10) {
+    static getLots() {
         return http.get(`lots/`, {
-            params: {
-                limit: limit,
-            }
         })
+    }
+
+    static getLot(uuid = null) {
+        if (uuid)
+            return http.get(`lots/${uuid}/`, {})
+    }
+
+    static BuyItNow(uuid = null) {
+        if (uuid)
+            return http.post(`lots/${uuid}/buy-it-now/`, {})
+    }
+
+    static MakeOffer(uuid = null) {
+        if (uuid)
+            return http.post(`lots/${uuid}/make-offer/`, {
+                
+            })
     }
 }
 
