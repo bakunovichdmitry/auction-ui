@@ -1,11 +1,17 @@
-import http from '../http-common'
+import {api} from '../api'
+import {removeFromLS} from "../utils/storage";
 
 export default class UserService {
-    static loginUser(username = '', password = '') {
-        return http.post(`users/jwt/token/`, {
+    static login(username = '', password = '') {
+        return api.post(`users/jwt/token/`, {
                 username: username,
                 password: password,
             }
-        ).then(response => response.data)
+        )
+    }
+
+    static logout() {
+        removeFromLS('isAuth');
+        removeFromLS('token');
     }
 }

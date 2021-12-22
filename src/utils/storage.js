@@ -2,6 +2,10 @@ export const setToLocalStorage = (key, value) => {
     localStorage.setItem(key, value);
 }
 
-export const getFromLocalStorage = (key) => {
+export const getFromLS = (key) => {
     localStorage.getItem(key);
+}
+
+export const removeFromLS = (key) => {
+    localStorage.removeItem(key);
 }

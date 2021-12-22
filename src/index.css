@@ -1,11 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
 html {
     height: 100%;
+    font-family: 'Montserrat', sans-serif;
 }
 
 body {
     margin: 0;
     height: 100%;
 }
+
 #root {
     height: 100%;
+}
+
+.wrapper {
+    height: 100%;
+}
+
+.flex {
+    display: flex;
+}
+
+.lot__link + .lot__link {
+    margin-left: 40px;
+}
+
+.btn {
+    display: flex;
+    width: max-content;
+    justify-content: center;
+    align-items: center;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    height: 27px;
+    padding: 4px 25px;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
+}
+
+.lot__status {
+    color: #3054E1;
+    background-color: #EBEBEB;
+    margin-top: 15px;
+}
+
+.logo {
+    margin-bottom: 55px;
+    font-size: 35px;
+    font-weight: bold;
+    width: 20%;
+    border-bottom: 1px solid #707070;
+}
+
+.lot-list__wrapper {
+    display: flex;
+    padding-left: 80px;
+    padding-right: 80px;
+    height: 100%;
+    flex-flow: column;
+    justify-content: center;
+}
+
+.sign-up__wrapper {
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.sign-up__logo {
+    font-size: 35px;
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid #707070;
+    margin-bottom: 70px;
+}
+
+.sign-up__wrapper form {
+    display: flex;
+    flex-flow: column;
+    width: 28%;
+    height: 33%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.submit {
+    background-color: #3054E1;
+    color: white;
+    padding: 20px 25px;
+    margin-top: 60px;
+    cursor: pointer;
+}
+
+.lot_submit {
+    margin-top: 20px;
+}
+
+.lot_submit + .lot_submit {
+    margin-left: 20px;
+}
+
+.sign-up__label {
+    margin: 6px 0 2px 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.sign-up__input {
+    border: 1px solid #EBEBEB;
+    font-size: 15px;
+    text-transform: none;
+}
+
+.sign-up__top-of-login {
+    background-color: #3054E1;
+    height: 40px;
+    width: 100%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.lot__property {
+    border-radius: 6px;
+    height: 33px;
+    background-color: #F6F6F6;
+    color: #3054E1;
+    font-weight: bold;
+    font-size: 24px;
+    width: 100%;
+    padding: 10px 0 10px 20px;
+    display: flex;
+    align-items: center;
+}
+
+.lot-detail__wrapper {
+    display: flex;
+    height: 100%;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.lot-detail__image {
+    border-radius: 20px;
+    object-fit: cover;
+    max-width: 500px;
+}
+
+.lot-detail__label {
+    color: black;
+    margin: 12px 0 2px 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.logout-btn {
+    margin: 0;
+    background: none;
+    border: none;
+    border-bottom: 1px solid #B0C8F9;
+    color: #B0C8F9;
+    cursor: pointer;
+}
+
+.logout-btn:hover {
+    border-bottom: 1px solid #3054E1;
+    color: #3054E1;
 }
