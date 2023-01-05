@@ -20,11 +20,12 @@ body {
 
 .flex {
     display: flex;
+    justify-content: space-between;
 }
 
-.lot__link + .lot__link {
-    margin-left: 40px;
-}
+/*.lot__link + .lot__link {*/
+/*    margin-left: 40px;*/
+/*}*/
 
 .btn {
     display: flex;
@@ -41,60 +42,11 @@ body {
     border: none;
 }
 
-.lot__status {
-    color: #3054E1;
-    background-color: #EBEBEB;
-    margin-top: 15px;
-}
-
-.logo {
-    margin-bottom: 55px;
-    font-size: 35px;
-    font-weight: bold;
-    width: 20%;
-    border-bottom: 1px solid #707070;
-}
-
-.lot-list__wrapper {
-    display: flex;
-    padding-left: 80px;
-    padding-right: 80px;
-    height: 100%;
-    flex-flow: column;
-    justify-content: center;
-}
-
-.sign-up__wrapper {
-    height: 100%;
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.sign-up__logo {
-    font-size: 35px;
-    font-weight: bold;
-    width: 100%;
-    text-align: center;
-    border-bottom: 1px solid #707070;
-    margin-bottom: 70px;
-}
-
-.sign-up__wrapper form {
-    display: flex;
-    flex-flow: column;
-    width: 28%;
-    height: 33%;
-    justify-content: space-between;
-    align-items: center;
-}
-
 .submit {
     background-color: #3054E1;
     color: white;
     padding: 20px 25px;
-    margin-top: 60px;
+    margin-top: 20px;
     cursor: pointer;
 }
 
@@ -104,26 +56,6 @@ body {
 
 .lot_submit + .lot_submit {
     margin-left: 20px;
-}
-
-.sign-up__label {
-    margin: 6px 0 2px 0;
-    font-size: 18px;
-    font-weight: bold;
-}
-
-.sign-up__input {
-    border: 1px solid #EBEBEB;
-    font-size: 15px;
-    text-transform: none;
-}
-
-.sign-up__top-of-login {
-    background-color: #3054E1;
-    height: 40px;
-    width: 100%;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
 }
 
 .lot__property {
@@ -172,4 +104,26 @@ body {
 .logout-btn:hover {
     border-bottom: 1px solid #3054E1;
     color: #3054E1;
+}
+
+
+.btn-disabled {
+    background: #EBEBEB;
+}
+
+.auth__label {
+    margin: 6px 0 2px 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.logout-icon {
+    position: absolute;
+    right: 80px;
+    top: 2%;
+}
+
+.logout-icon:hover {
+    opacity: .7;
+    cursor: pointer;
 }

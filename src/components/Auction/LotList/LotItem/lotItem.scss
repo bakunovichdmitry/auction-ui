@@ -1,0 +1,32 @@
+.lot__link {
+  width: 100%;
+  max-width: 31%;
+  text-decoration: none;
+  height: max-content;
+
+  .lot__item {
+
+    img {
+      border-radius: 20px;
+      object-fit: cover;
+    }
+
+    .title {
+      color: black;
+      margin: 12px 0 2px 0;
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    .description {
+      color: #C5C5C5;
+      font-size: 18px;
+    }
+
+    .status {
+      color: white;
+      background-color: #3054E1;
+      margin-top: 15px;
+    }
+  }
+}

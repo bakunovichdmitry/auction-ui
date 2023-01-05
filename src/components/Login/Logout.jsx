@@ -1,20 +1,30 @@
 import React from "react";
-import UserService from "../../services/UserService";
 import {useHistory} from "react-router-dom";
 
+
+import {useDispatch, useSelector} from "react-redux";
+
+import LogoutIcon from "../../assets/logout.png";
+import {actionCreator} from "../../store/actions";
+
+
 export default function Logout() {
-    let history = useHistory();
+  let history = useHistory();
+  const dispatch = useDispatch();
 
-    const logout = () => {
-        UserService.logout()
-        history.push('/lots');
-    }
-
-    return (
-        <div style={{position: "absolute", right: "5px" }}>
-            <button className="logout-btn" onClick={logout}>
-                Logout
-            </button>
-        </div>
+  const logout = () => {
+    dispatch(
+      actionCreator.logout()
     )
+    history.push('/');
+  }
+
+  return (
+    <img
+      onClick={logout}
+      className="logout-icon"
+      src={LogoutIcon}
+      alt="Logout"
+    />
+  )
 }
